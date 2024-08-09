@@ -1,11 +1,10 @@
 <?php
 
-function tarkistaKirjautuminen($email="", $salasana="") {
+  function tarkistaKirjautuminen($email="", $salasana="") {
 
-    // Haetaan käyttäjän tiedot sen sähköpostiosoitteella.
+    // Haetaan käyttäjän tiedot sen sähköpostiosoitteella. 
     require_once(MODEL_DIR . 'henkilo.php');
     $tiedot = haeHenkilo($email);
-    $tiedot = array_shift($tiedot);
 
     // Tarkistetaan ensin löytyikö käyttäjä. Jos löytyi, niin
     // tarkistetaan täsmäävätkö salasanat.
@@ -36,6 +35,5 @@ function tarkistaKirjautuminen($email="", $salasana="") {
     session_destroy();
 
   }
-
 
 ?>
