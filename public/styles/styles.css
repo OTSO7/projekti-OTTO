@@ -189,6 +189,32 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+.formi {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+
+input[type=submit] {
+  padding: 0.5rem 3rem;
+  border-radius: 0.3rem;
+  background-color: #ff6347;
+  color: #fff;
+  font-weight: bold;
+  min-width: 15rem;
+  margin: 1rem auto;
+}
+
+
+input {
+  border: 1px solid #999;
+  border-radius: 0.3rem;
+  padding: 0.45rem;
+  font-size: 1rem;
+}
+
+
+
 /* Footer */
 footer {
   background-color: #333;
