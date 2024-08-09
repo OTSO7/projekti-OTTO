@@ -27,26 +27,16 @@
 
     <section class="hero-section">
         <div class="hero-content">
-        <h1>Kirjautuminen</h1>
+        <h1>Unohtunut salasana</h1>
+
+<p>Voit vaihtaa unohtuneen salasanan vaihtolinkillä avulla. Vaihtolinkin voit tilata sähköpostiisi alla olevalla lomakkeella.</p>
 
 <form action="" method="POST">
-<div class="formi">
-    <label>Sähköposti:</label>
-    <input type="text" name="email">
-  </div>
   <div class="formi">
-    <label>Salasana:</label>
-    <input type="password" name="salasana">
+    <label for="email">Sähköposti:</label>
+    <input id="email" type="email" name="email">
   </div>
-  <div class="error"><?= getValue($error,'virhe'); ?></div>
   <div>
-    <input type="submit" name="laheta" value="Kirjaudu">
+    <input type="submit" name="laheta" value="Lähetä">
   </div>
 </form>
-
-<div class="info">
-  Jos sinulla ei ole vielä tunnuksia, niin voit luoda ne <a href="lisaa_tili">täällä</a>.<br>
-  Jos olet unohtanut salasanasi, niin voit vaihtaa sen <a href="tilaa_vaihtoavain">täällä</a>.
-</div>
-
-    </section>
