@@ -13,11 +13,13 @@
                 <a href="<?=BASEURL?>">OtsoArts</a>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><?php if (isset($_SESSION['user'])) {
+            echo "<div class='username'>$_SESSION[user]</div>";
+            echo "<div><a href='logout'>Kirjaudu ulos</a></div>";
+          } else {
+            echo "<div><a href='kirjaudu'>Kirjaudu</a></div>";
+          } ?></li>
+                
             </ul>
         </nav>
     </header>

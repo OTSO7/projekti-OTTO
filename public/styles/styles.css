@@ -12,6 +12,12 @@ body {
   line-height: 1.6;
 }
 
+.username {
+
+  color: #ff6600; /* Vaihda tähän haluamasi väri */
+    font-weight: bold;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
