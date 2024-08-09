@@ -14,7 +14,7 @@
             </div>
             <ul class="nav-links">
                 <li><?php if (isset($_SESSION['user'])) {
-            echo "<div>$_SESSION[user]</div>";
+            echo "<div class='username'>$_SESSION[user]</div>";
             echo "<div><a href='logout'>Kirjaudu ulos</a></div>";
           } else {
             echo "<div><a href='kirjaudu'>Kirjaudu</a></div>";
@@ -23,6 +23,7 @@
             </ul>
         </nav>
     </header>
+
 
     <section class="hero-section">
         <div class="hero-content">
