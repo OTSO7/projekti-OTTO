@@ -6,7 +6,10 @@
   </head>
   <body>
     <header>
-      <h1>OtsoArts</h1>
+    <header>
+      <h1><a href="<?=BASEURL?>">OtsoArts</a></h1>
+    </header>
+
     </header>
     <section>
       <?=$this->section('content')?>
