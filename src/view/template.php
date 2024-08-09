@@ -28,37 +28,49 @@
     </header>
 
     <section class="hero-section">
-        <div class="hero-content">
-            <h1>OtsoArts</h1>
-            <p>Your Gateway to Extraordinary Art Experiences</p>
-            <a href="#events" class="btn-main">Discover Upcoming Events</a>
-        </div>
-    </section>
+    <div class="hero-content">
+        <!-- Tarkistetaan jos tämä kommentti muuttaa jotain -->
+
+        <h1>Tervetuloa Suomen suurimpaan taideyhteisöön!</h1>
+        <p>Vuosi 2024 on täynnä innostavia taidetapahtumia.</p>
+        <a href="#events" class="btn-main">Katsele tapahtumia...</a>
+    </div>
+</section>
+
 
     <section id="events" class="events-section">
-        <h2>Upcoming Art Events</h2>
+        <h2>Tulevat taidetapahtumat</h2>
         <div class="events-container">
             <?=$this->section('content')?>
         </div>
     </section>
-
     <section class="featured-art-section">
-        <h2>Featured Artwork</h2>
-        <div class="art-gallery">
-            <div class="art-item">
-                <img src="public/images/art1.jpg" alt="Art 1">
-            </div>
-            <div class="art-item">
-                <img src="public/images/art2.jpg" alt="Art 2">
-            </div>
-            <div class="art-item">
-                <img src="public/images/art3.jpg" alt="Art 3">
-            </div>
-            <div class="art-item">
-                <img src="public/images/art4.jpg" alt="Art 4">
-            </div>
+    <h2>Viikon taide</h2>
+    <div class="art-gallery">
+        <div class="art-item">
+            <a href="art1.php">
+                <img src="public/images/art1.gif" alt="Art 1">
+            </a>
         </div>
-    </section>
+        <div class="art-item">
+            <a href="art2.html">
+                <img src="public/images/art2.jpg" alt="Art 2">
+            </a>
+        </div>
+        <div class="art-item">
+            <a href="art3.html">
+                <img src="public/images/art3.jpg" alt="Art 3">
+            </a>
+        </div>
+        <div class="art-item">
+            <a href="art4.html">
+                <img src="public/images/art4.jpg" alt="Art 4">
+            </a>
+        </div>
+    </div>
+</section>
+
+
 
     <footer>
         <div class="footer-content">

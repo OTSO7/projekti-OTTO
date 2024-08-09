@@ -1,4 +1,4 @@
-/* Reset and General Styles */
+
 body, h1, h2, h3, p, ul {
   margin: 0;
   padding: 0;
@@ -10,12 +10,13 @@ body {
   color: #333;
   background-color: #f7f7f7;
   line-height: 1.6;
+  
 }
 
 
 .username {
 
-  color: #ff6600; /* Vaihda tähän haluamasi väri */
+  color: #ff6600;
     font-weight: bold;
 }
 
@@ -50,60 +51,119 @@ body {
 .navbar .nav-links li a:hover {
   color: #ff6347;
 }
-
-/* Hero Section */
-.hero-section {
-  background: url('public/images/hero-bg-new.jpg') no-repeat center center/cover;
-  height: 100vh;
+/* Container for all event cards */
+.tapahtumat-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  color: #fff;
-}
-
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 600px;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
   padding: 20px;
 }
 
-.hero-content h1 {
-  font-size: 3.5em;
+/* Individual event card */
+.tapahtuma-card {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+/* Card hover effect */
+.tapahtuma-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.tapahtuma-header {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+
+.tapahtuma-dates {
+  font-size: 1.1em;
+  color: #555;
   margin-bottom: 20px;
-  font-weight: bold;
+}
+
+
+.tapahtuma-link {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #ff6347;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px; 
+  transition: background-color 0.2s;
+}
+
+/* Button hover effect */
+.tapahtuma-link:hover {
+  background-color: #ff6347; /* Darker blue on hover */
+}
+
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Korkeus 100% näkymäkorkeudesta */
+    background-image: url('public/images/hero.jpg') !important; /* Päivitä kuva tähän */
+    background-size: cover; /* Varmistaa, että kuva peittää koko hero-osion */
+    background-position: center; /* Keskittää kuvan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay hero-osion päällä */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Tummentaa taustakuvaa */
+    z-index: 1;
+}
+
+/* Hero-osion sisältö */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Sisältö tulee overlayn päälle */
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .hero-content p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
 
 .btn-main {
-  padding: 12px 30px;
-  background-color: #ff6347;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: background-color 0.3s;
+    padding: 12px 30px;
+    background-color: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s;
 }
 
 .btn-main:hover {
-  background-color: #ff4500;
+    background-color: #ff4500;
 }
+
 
 /* Events Section */
 .events-section {
@@ -171,30 +231,45 @@ body {
 }
 
 /* Featured Art Section */
-.featured-art-section {
-  background-color: #fafafa;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.featured-art-section h2 {
-  font-size: 2.5em;
-  margin-bottom: 40px;
-  color: #333;
-}
-
+/* Gallery container */
 .art-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  justify-content: center;
+  display: flex;
+  gap: 15px; /* Space between images */
+  justify-content: space-around;
+  padding: 15px;
 }
 
+/* Individual art item */
+.art-item {
+  flex: 1;
+  max-width: 22%; /* Smaller fixed width for containers */
+  height: 200px; /* Fixed height for consistency */
+  overflow: hidden; /* Hide any overflow */
+  border-radius: 50px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s;
+}
+
+/* Ensure images fit within the box */
 .art-item img {
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire container */
+  display: block;
 }
+
+/* Hover effect on images */
+.art-item:hover {
+  transform: translateY(-5px); /* Pop effect on hover */
+}
+
+/* Link styling for images */
+.art-item a {
+  display: block;
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color */
+}
+
 
 .formi {
   display: flex;
@@ -263,9 +338,6 @@ input[type=submit], .button {
   color: #ff6347;
   font-size: 0.8rem;
 }
-
-
-
 
 /* Footer */
 footer {
