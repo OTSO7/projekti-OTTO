@@ -83,11 +83,12 @@ require_once '../src/init.php';
         
       
         // ... switch-lauseen alku säilyy sellaisenaan
-    case '/lisaa_tili':
-      if (isset($_POST['laheta'])) {
-        $formdata = cleanArrayData($_POST);
-        require_once CONTROLLER_DIR . 'tili.php';
-        $tulos = lisaaTili($formdata);
+        case '/lisaa_tili':
+          if (isset($_POST['laheta'])) {
+            $formdata = cleanArrayData($_POST);
+            require_once CONTROLLER_DIR . 'tili.php';
+            $tulos = lisaaTili($formdata,$config['urls']['baseUrl']);
+    
                 // ... switch-lauseen alku säilyy sellaisenaan
                 if ($tulos['status'] == "200") {
                   echo $templates->render('tili_luotu', ['formdata' => $formdata]);
