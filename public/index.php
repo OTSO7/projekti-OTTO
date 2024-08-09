@@ -33,6 +33,8 @@ require_once '../src/init.php';
       } else {
         echo $templates->render('tapahtumanotfound');
       }
+    } else if ($request === '/lisaa_tili') {
+      echo $templates->render('lisaa_tili');
     } else {
       echo $templates->render('notfound');
     }

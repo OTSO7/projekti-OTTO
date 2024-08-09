@@ -24,16 +24,35 @@
 
     <section class="hero-section">
         <div class="hero-content">
-            <?php
-  $start = new DateTime($tapahtuma['tap_alkaa']);
-  $end = new DateTime($tapahtuma['tap_loppuu']);
-?>
-
-<h1><?=$tapahtuma['nimi']?></h1>
-<div><?=$tapahtuma['kuvaus']?></div>
-<div>Alkaa: <?=$start->format('j.n.Y G:i')?></div>
-<div>Loppuu: <?=$end->format('j.n.Y G:i')?></div>
+        <h1>Uuden tilin luonti</h1>
+        <form action="" method="POST">
+  <div>
+    <label for="nimi">Nimi:</label>
+    <input id="nimi" type="text" name="nimi">
+  </div>
+  <div>
+    <label for="email">Sähköposti:</label>
+    <input id="email" type="email" name="email">
+  </div>
+  <div>
+    <label for="discord">Discord-tunnus:</label>
+    <input id="discord" type="text" name="discord">
+  </div>
+  <div>
+    <label for="salasana1">Salasana:</label>
+    <input id="salasana1" type="password" name="salasana1">
+  </div>
+  <div>
+    <label for="salasana2">Salasana uudelleen:</label>
+    <input id="salasana2" type="password" name="salasana2">
+  </div>
+  <div>
+    <input type="submit" name="laheta" value="Luo tili">
+  </div>
+</form>
         </div>
     </section>
+
+
 
 

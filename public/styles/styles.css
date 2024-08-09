@@ -1,175 +1,227 @@
-/* Base styles */
-
-html, body {
-  height: 100%;
+/* Reset and General Styles */
+body, h1, h2, h3, p, ul {
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f4f4f9;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
   color: #333;
-  overflow-x: hidden;
+  background-color: #f7f7f7;
+  line-height: 1.6;
 }
 
-a {
-  color: #0073e6;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #005bb5;
-}
-
-/* Header styles */
-
-header {
+/* Navbar */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
-  padding: 20px 40px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+  padding: 20px;
+  background-color: #333;
 }
 
-.logo-container h1 {
+.navbar .logo a {
+  color: #fff;
   font-size: 1.8em;
-  margin: 0;
-  color: #0073e6;
-}
-
-.navigation ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.navigation li {
-  margin-left: 20px;
-}
-
-.navigation a {
-  color: #333;
+  text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
-.navigation a:hover {
-  color: #0073e6;
-}
-
-/* Hero section styles */
-
-.hero {
+.navbar .nav-links {
+  list-style: none;
   display: flex;
-  justify-content: center;
+  gap: 20px;
+}
+
+.navbar .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.navbar .nav-links li a:hover {
+  color: #ff6347;
+}
+
+/* Hero Section */
+.hero-section {
+  background: url('public/images/hero-bg-new.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
   align-items: center;
-  height: 60vh;
-  background: url('public/images/hero.jpg') no-repeat center center/cover;
-  position: relative;
-  margin-top: 80px; /* Offset for fixed header */
+  justify-content: center;
   text-align: center;
+  position: relative;
+  color: #fff;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
 .hero-content {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 40px;
-  border-radius: 8px;
+  position: relative;
+  z-index: 2;
   max-width: 600px;
+  padding: 20px;
 }
 
-.hero h2 {
-  font-size: 2.5em;
-  color: #333;
-  margin: 0 0 10px;
-}
-
-.hero p {
-  font-size: 1.2em;
-  color: #555;
+.hero-content h1 {
+  font-size: 3.5em;
   margin-bottom: 20px;
-}
-
-.btn-primary {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #0073e6;
-  color: #fff;
-  border-radius: 5px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover {
-  background-color: #005bb5;
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
 }
 
-/* Main content area with image */
-
-.content-section {
-  padding: 80px 20px;
-  background-color: antiquewhite;
-  width: 100%; /* Full width */
+.btn-main {
+  padding: 12px 30px;
+  background-color: #ff6347;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s;
 }
 
-.content {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto; /* Centers the content */
-  padding: 0 20px; /* Adds additional padding for centering */
+.btn-main:hover {
+  background-color: #ff4500;
 }
 
-.text-content {
-  flex: 1;
-  font-size: 1.5em;
-}
-
-.image-content img {
-  max-width: 400px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer styles */
-
-footer {
+/* Events Section */
+.events-section {
+  background-color: #fff;
+  padding: 60px 20px;
   text-align: center;
-  padding: 20px 0;
-  background-color: #f0f0f0;
-  color: #666;
+}
+
+.events-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.events-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.event-card {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: left;
+}
+
+.event-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-details {
+  padding: 20px;
+}
+
+.event-details h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #ff6347;
+}
+
+.event-details p {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #555;
+}
+
+/* Featured Art Section */
+.featured-art-section {
+  background-color: #fafafa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.featured-art-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.art-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.art-item img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-content .logo-footer a {
+  color: #fff;
+  font-size: 1.8em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.social-links a:hover {
+  color: #ff6347;
+}
+
+footer p {
+  margin-top: 20px;
   font-size: 0.9em;
-}
-
-footer hr {
-  border: 0;
-  border-top: 1px solid #ddd;
-  margin: 20px 0;
-}
-
-footer div {
-  margin-top: 10px;
-}
-
-/* Responsive styles */
-
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 2em;
-  }
-
-  .content {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .image-content {
-    margin-top: 20px;
-  }
 }

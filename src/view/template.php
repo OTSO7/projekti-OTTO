@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <link href="styles/styles.css" rel="stylesheet">
     <title>OtsoArts - <?=$this->e($title)?></title>
     <meta charset="UTF-8">
+    <link href="styles/styles.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <h1><a href="<?=BASEURL?>">OtsoArts</a></h1>
-        </div>
-        <nav class="navigation">
-            <ul>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="<?=BASEURL?>">OtsoArts</a>
+            </div>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -21,28 +22,51 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero-section">
         <div class="hero-content">
-            <h2>Welcome to OtsoArts</h2>
-            <p>Explore the world of art with a modern touch. Discover, create, and be inspired.</p>
-            <a href="#gallery" class="btn-primary">Explore Gallery</a>
+            <h1>OtsoArts</h1>
+            <p>Your Gateway to Extraordinary Art Experiences</p>
+            <a href="#events" class="btn-main">Discover Upcoming Events</a>
         </div>
     </section>
 
-    <section class="content-section">
-        <div class="content">
-            <div class="text-content">
-                <?=$this->section('content')?>
+    <section id="events" class="events-section">
+        <h2>Upcoming Art Events</h2>
+        <div class="events-container">
+            <?=$this->section('content')?>
+        </div>
+    </section>
+
+    <section class="featured-art-section">
+        <h2>Featured Artwork</h2>
+        <div class="art-gallery">
+            <div class="art-item">
+                <img src="public/images/art1.jpg" alt="Art 1">
             </div>
-            <div class="image-content">
-                <img src="public/images/pexels.jpg" alt="Artistic Image">
+            <div class="art-item">
+                <img src="public/images/art2.jpg" alt="Art 2">
+            </div>
+            <div class="art-item">
+                <img src="public/images/art3.jpg" alt="Art 3">
+            </div>
+            <div class="art-item">
+                <img src="public/images/art4.jpg" alt="Art 4">
             </div>
         </div>
     </section>
 
     <footer>
-        <hr>
-        <div>OtsoArts by Otto Saarimaa</div>
+        <div class="footer-content">
+            <div class="logo-footer">
+                <a href="<?=BASEURL?>">OtsoArts</a>
+            </div>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <p>&copy; 2024 OtsoArts by Otto Saarimaa</p>
     </footer>
 </body>
 </html>
