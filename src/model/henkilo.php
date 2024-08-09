@@ -7,4 +7,9 @@
     return DB::lastInsertId();
   }
 
+  function haeHenkiloSahkopostilla($email) {
+    return DB::run('SELECT * FROM henkiloo WHERE email = ?;', [$email])->fetchAll();
+  }
+
+
 ?>
