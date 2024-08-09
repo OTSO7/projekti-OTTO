@@ -56,6 +56,32 @@ require_once '../src/init.php';
             echo $templates->render('tapahtumanotfound');
           }
           break;
+          case '/ilmoittaudu':
+            if ($_GET['id']) {
+              require_once MODEL_DIR . 'ilmoittautuminen.php';
+              $idtapahtuma = $_GET['id'];
+              if ($loggeduser) {
+                lisaaIlmoittautuminen($loggeduser['idhenkilo'],$idtapahtuma);
+              }
+              header("Location: tapahtuma?id=$idtapahtuma");
+            } else {
+              header("Location: tapahtumat");
+            }
+            break;
+            case '/peru':
+              if ($_GET['id']) {
+                require_once MODEL_DIR . 'ilmoittautuminen.php';
+                $idtapahtuma = $_GET['id'];
+                if ($loggeduser) {
+                  poistaIlmoittautuminen($loggeduser['idhenkilo'],$idtapahtuma);
+                }
+                header("Location: tapahtuma?id=$idtapahtuma");
+              } else {
+                header("Location: tapahtumat");  
+              }
+              break;
+        
+      
         // ... switch-lauseen alku säilyy sellaisenaan
     case '/lisaa_tili':
       if (isset($_POST['laheta'])) {
