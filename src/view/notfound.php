@@ -26,8 +26,8 @@
             </ul>
         </nav>
     </header>
-    <section class="hero-section">
-        <div class="hero-content">
+    <section class="hero-section2">
+        <div class="hero-content2">
         <h1>Huppista!</h1>
 <p>Valitettavasti pyytämääsi sivua ei ole. Ole hyvä ja tarkista sivun osoite.</p>
 </div>

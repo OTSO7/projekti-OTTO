@@ -28,8 +28,8 @@
     </header>
 
 
-    <section class="hero-section">
-        <div class="hero-content">
+    <section class="hero-section2">
+        <div class="hero-content2">
             <?php
   $start = new DateTime($tapahtuma['tap_alkaa']);
   $end = new DateTime($tapahtuma['tap_loppuu']);

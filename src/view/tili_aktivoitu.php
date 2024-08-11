@@ -27,8 +27,8 @@
         </nav>
     </header>
 
-    <section class="hero-section">
-        <div class="hero-content">
+    <section class="hero-section2">
+        <div class="hero-content2">
         <h1>Tilisi on nyt aktivoitu!</h1>
 
 <p>Voit nyt käyttää palvelua. Ole hyvä ja kirjaudu palveluun kirjautumissivulla.</p>

@@ -26,8 +26,8 @@
             </ul>
         </nav>
     </header>
-    <section class="hero-section">
-        <div class="hero-content">
+    <section class="hero-section2">
+        <div class="hero-content2">
         <h1>Oivoi!</h1>
 <p>Valitettavasti sinulla ei ole ylläpitoon tarvittavia käyttöoikeuksia. 
    Voit olla tarvittaessa yhteydessä sivuston ylläpitäjään.</p>

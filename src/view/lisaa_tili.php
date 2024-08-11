@@ -28,8 +28,8 @@
     </header>
 
 
-    <section class="hero-section">
-        <div class="hero-content">
+    <section class="hero-section2">
+        <div class="hero-content2">
         <h1>Uuden tilin luonti</h1>
 
 <form action="" method="POST">

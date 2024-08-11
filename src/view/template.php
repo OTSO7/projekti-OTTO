@@ -29,8 +29,6 @@
 
     <section class="hero-section">
     <div class="hero-content">
-        <!-- Tarkistetaan jos tämä kommentti muuttaa jotain -->
-
         <h1>Tervetuloa Suomen suurimpaan taideyhteisöön!</h1>
         <p>Vuosi 2024 on täynnä innostavia taidetapahtumia.</p>
         <a href="#events" class="btn-main">Katsele tapahtumia...</a>
@@ -45,30 +43,53 @@
         </div>
     </section>
     <section class="featured-art-section">
-    <h2>Viikon taide</h2>
-    <div class="art-gallery">
-        <div class="art-item">
-            <a href="art1.php">
-                <img src="public/images/art1.gif" alt="Art 1">
-            </a>
+        <h2>Viikon taide</h2>
+        <div class="art-gallery">
+            <div class="art-item">
+                <a href="#" onclick="openModal('art1.gif', 'Tämä on esittelyteksti taideteokselle 1. Tämä teos kuvastaa kevään heräämistä ja luonnon elinvoimaa.')">
+                    <img src="public/images/art1.gif" alt="Art 1">
+                </a>
+            </div>
+            <div class="art-item">
+                <a href="#" onclick="openModal('art2.jpg', 'Tämä on esittelyteksti taideteokselle 2. Teos korostaa modernin elämän ristiriitoja ja kaupungistumisen vaikutuksia.')">
+                    <img src="public/images/art2.jpg" alt="Art 2">
+                </a>
+            </div>
+            <div class="art-item">
+                <a href="#" onclick="openModal('art3.jpg', 'Tämä on esittelyteksti taideteokselle 3. Teoksen vahvat värit ja abstrakti muotokieli herättävät voimakkaita tunteita.')">
+                    <img src="public/images/art3.jpg" alt="Art 3">
+                </a>
+            </div>
+            <div class="art-item">
+                <a href="#" onclick="openModal('art4.jpg', 'Tämä on esittelyteksti taideteokselle 4. Tämä teos on kunnianosoitus klassiselle taiteelle ja sen perinteille.')">
+                    <img src="public/images/art4.jpg" alt="Art 4">
+                </a>
+            </div>
         </div>
-        <div class="art-item">
-            <a href="art2.html">
-                <img src="public/images/art2.jpg" alt="Art 2">
-            </a>
-        </div>
-        <div class="art-item">
-            <a href="art3.html">
-                <img src="public/images/art3.jpg" alt="Art 3">
-            </a>
-        </div>
-        <div class="art-item">
-            <a href="art4.html">
-                <img src="public/images/art4.jpg" alt="Art 4">
-            </a>
-        </div>
+    </section>
+
+    <!-- Modaalin rakenne -->
+    <div id="art-modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
     </div>
-</section>
+
+    <!-- Javascript-koodi -->
+    <script>
+    function openModal(imageName, captionText) {
+        var modal = document.getElementById("art-modal");
+        var modalImg = document.getElementById("modal-img");
+        var caption = document.getElementById("caption");
+        modal.style.display = "flex";
+        modalImg.src = "public/images/" + imageName;
+        caption.innerText = captionText;
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("art-modal");
+        modal.style.display = "none";
+    }
+    </script>
 
 
 
